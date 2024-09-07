@@ -1,0 +1,44 @@
+*Regra de um arquivo magic
+
+ex: 41 string 42 found 42 number
+
+41 = byte, sempre comeca com um numero antes
+
+string = tipo de variavel
+
+42 = texto para achar
+
+found 42 number = texto de resultado
+
+*Cria um file com 41 bytes
+
+primeiro touch test_file
+
+logo depois
+
+dd if=/dev/zero bs=1 count=41 of=test_file
+
+dd = ferramenta mara modificar
+
+if = input file
+
+/dev/zero = comando para gerar continuamente uma seguencia de bytes 0
+
+bs=1 = informa que cada bloco hexadecimal tem 1 byte
+
+count=41 = pede para que o comando copie 41 blocos de 1 byte
+
+of=test_file = informa qual o nome do arquivo que vai modficar
+
+*Adicionar texto string 42 no 42 byte
+
+echo -n "42" >> test_file
+
+echo = comando para colocar
+-n = no final
+"42" = texto
+>> test_file = qual vai ser o arquivo
+
+*Teste
+
+Comando: file -m ft_magic test_file 

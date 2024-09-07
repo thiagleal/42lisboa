@@ -1,0 +1,7 @@
+:set number -> Adiciona numeros
+:set splitbellow -> para dividir para baixo
+:term -> abre terminal
+:e [caminho ficheiro] -> Abre ficheiro
+:buffers -> Ve os ficheiros abertos
+:b[n] -> Mostra um dos ficheiros abertos
+control + w +w -> Muda focus panel
